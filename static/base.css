@@ -250,4 +250,7 @@ a:hover{
   a{
     font-size: 20px;
   }
+  .biglink{
+    font-size: 30px;
+  }
 }
