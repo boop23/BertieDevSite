@@ -15,3 +15,5 @@ def contact():
 
 
 app.run()
+
+# deployed to railway and render
