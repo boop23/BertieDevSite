@@ -1,0 +1,244 @@
+/*
+teal palletes
+light	(178,216,216)
+sky	(102,178,178)
+normal dark (0,128,128)
+dark 	(0,102,102)
+borders (0,76,76)
+light sea green	rgb(32,178,170)
+tnail 604 400
+rgb(102,178,178)
+ */
+ @keyframes oscillate {
+  0% {
+    box-shadow: 0px 0px 15px 10px rgb(150,255,255, 0.75);
+  }
+  100% {
+    box-shadow: 0px 0px 15px 17px rgb(80,170,255, 0.4);
+  }
+}
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+h1, h3, p{
+  color: white;
+}
+a{
+  color: violet
+}
+nav{
+  background: rgb(32,178,170, 0.60);
+  height: 120px;
+  width: 90%;
+  border: solid rgb(0,76,76) 5px;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  text-align: center;
+
+}
+img{
+  border: solid rgb(0,76,76) 5px;
+  border-radius: 10px;
+}
+iframe{
+  border: solid rgb(0,76,76) 5px;
+}
+.box {
+  border: solid rgb(0,76,76) 5px;
+  background: rgb(32,178,170, 0.5);
+  width: 100%;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 3px 3px black;
+  transition: 1s all cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  margin-bottom: 25px;
+}
+
+.box:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 10px 10px 15px rgb(32,178,170);
+}
+
+img.portrait {
+  animation: oscillate 2s ease-in forwards infinite alternate;
+}
+body {
+  background-repeat: repeat;
+  background-size: cover;
+  overflow: overlay;
+  background-attachment: local;
+  height:100%;
+  width:100%;
+  padding: 70px;
+  padding-top: 20px;
+  margin: 0px;
+  font-family: "montserrat", monospace;
+  width: 100%;
+}
+body.home {
+  background-image: url('tnails/BackgroundGIF.gif');
+  overflow: overlay;
+}
+body.Projects {
+  background-image: url('tnails/Fish.gif');
+}
+body.contact {
+  background-image: url('tnails/Traingirl.gif');
+  overflow: overlay;
+}
+label.logo{
+  color: white;
+  font-size: 50px;
+  line-height: 100px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+nav ul{
+  flex-grow: 10;
+}
+nav ul li{
+  display: inline-flex;
+  line-height: 100px;
+}
+nav ul li a{
+  color: white;
+  font-size: 25px;
+  padding: 3px;
+  border-radius: 7px;
+  transition: .5s;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.awards{
+  float: right;
+  width: 40%;
+  margin-right: 0px;
+  margin-top: 20px;
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+.flex-main{
+  flex: 2;
+  margin-right: 10px;
+}
+.flex-projects{
+  flex: 1;
+}
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+.carousel {
+  width: 100%;
+  height: 85%;
+  position: relative;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+}
+
+.carousel-button.next {
+  right: 1rem;
+}
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, .1);
+}
+.slidebox {
+  border: solid rgb(0,76,76) 5px;
+  background: rgb(32,178,170, 0.75);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 3px 3px black;
+  transition: 1s all cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  margin-bottom: 25px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+.hideables{
+  display: block;
+}
+.unhideables{
+  display: none;
+}
+@media only screen and (max-width: 1150px) {
+  nav,
+  .hideables {
+    display: none;
+  }
+  .slidebox,
+  .carousel{
+    height: 105%;
+  }
+  .unhideables{
+    display: block;
+  }
+  body.home{
+    padding-left: 0px;
+  }
+}
