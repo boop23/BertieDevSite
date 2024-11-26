@@ -1,4 +1,5 @@
 from flask import *
+import os
 
 app = Flask(__name__)
 application = app
@@ -14,6 +15,6 @@ def contact():
 
 
 
-app.run()
+app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 
 # deployed to railway and render
